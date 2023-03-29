@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from .api import chatfast
 # Create your views here.
-
+import csv
+from .models import menu
 
 def index(request):
     res = request.GET.get('res', '')  # GET 파라미터에서 res 값을 가져옴
@@ -15,3 +16,20 @@ def index(request):
 
     # chatgpt_main.html 페이지 렌더링
     return render(request, 'chatgpt/index.html', {'res': res})
+
+def bulk_import(request):
+    CSV_PATH = 'static/menu_list.csv'
+
+    with open(CSV_PATH, newline='',encoding='euc-kr') as csvfile:
+        data_reader = csv.DictReader(csvfile)
+        for row in data_reader:
+            menu.objects.create(
+            foodname=row['foodname'],
+            restname =row['restname'],
+
+            lat =  row['lat'],
+            lon = row['lon'],
+            )
+
+    return
+
