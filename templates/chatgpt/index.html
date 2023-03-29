@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chatgpt</title>
+</head>
+<body>
+<form method="POST" action="{% url 'chatgpt:index' %}">
+    {% csrf_token %}
+    <input type="text" name="user_input">
+    <button type="submit">Submit</button>
+    {% if res %}
+        <p class="card-text">{{ res }}</p>
+    {% else %}
+        <p class="card-text">No result yet</p>
+    {% endif %}
+</form>
+</body>
+</html>
