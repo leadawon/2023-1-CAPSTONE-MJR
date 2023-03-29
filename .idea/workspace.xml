@@ -85,7 +85,7 @@
       <updated>1680045010924</updated>
       <workItem from="1680045011776" duration="3451000" />
       <workItem from="1680059845081" duration="110000" />
-      <workItem from="1680060411168" duration="3259000" />
+      <workItem from="1680060411168" duration="3417000" />
     </task>
     <task id="LOCAL-00001" summary="INITIATE project">
       <created>1680048093109</created>
@@ -94,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680048093109</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ADD menu model + ADD bulk_import">
+      <created>1680063807958</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680063807958</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +109,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="INITIATE project" />
-    <option name="LAST_COMMIT_MESSAGE" value="INITIATE project" />
+    <MESSAGE value="ADD menu model + ADD bulk_import" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD menu model + ADD bulk_import" />
   </component>
 </project>
