@@ -24,11 +24,11 @@ def bulk_import(request):
         data_reader = csv.DictReader(csvfile)
         for row in data_reader:
             menu.objects.create(
-            foodname=row['foodname'],
-            restname =row['restname'],
-
-            lat =  row['lat'],
-            lon = row['lon'],
+            foodname=row['음식이름'],
+            restname =row['가게이름'],
+            price = row['가격'],
+            lat =  row['위도'],
+            lon = row['경도'],
             )
 
     return
