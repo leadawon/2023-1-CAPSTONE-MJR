@@ -29,6 +29,8 @@ def bulk_import(request):
             price = row['가격'],
             lat =  row['위도'],
             lon = row['경도'],
+            location = row['위치'],
+            category = row['카테고리'],
             )
 
     return
