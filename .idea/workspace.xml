@@ -18,6 +18,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -67,6 +72,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\Desktop\leedawon\TIL_github\2023-1-CAPSTONE-MJR\static\css" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="2023-1-CAPSTONE-MJR" type="Python.DjangoServer" factoryName="Django server">
       <module name="2023-1-CAPSTONE-MJR" />
@@ -105,7 +115,9 @@
       <workItem from="1680060411168" duration="3417000" />
       <workItem from="1680172944055" duration="236000" />
       <workItem from="1680334131632" duration="2903000" />
-      <workItem from="1680484726580" duration="685000" />
+      <workItem from="1680484726580" duration="740000" />
+      <workItem from="1680494478502" duration="1844000" />
+      <workItem from="1680509997472" duration="3379000" />
     </task>
     <task id="LOCAL-00001" summary="INITIATE project">
       <created>1680048093109</created>
@@ -128,7 +140,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680337048747</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="UPDATE food.location and food.category">
+      <created>1680485463182</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680485463182</updated>
+    </task>
+    <task id="LOCAL-00005" summary="UPDATE bootstrap">
+      <created>1680512747853</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680512747853</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +165,8 @@
     <MESSAGE value="INITIATE project" />
     <MESSAGE value="ADD menu model + ADD bulk_import" />
     <MESSAGE value="UPDATE api.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE api.py" />
+    <MESSAGE value="UPDATE food.location and food.category" />
+    <MESSAGE value="UPDATE bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE bootstrap" />
   </component>
 </project>

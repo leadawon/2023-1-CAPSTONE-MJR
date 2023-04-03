@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .btn-go {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <a href="{% url "chatgpt:index" %}">go</a>
+    <div class="container">
+        <h1>My Page</h1>
+        <a href="{% url 'chatgpt:index' %}" class="btn btn-primary btn-go">Go to Chat Page</a>
+    </div>
 </body>
 </html>

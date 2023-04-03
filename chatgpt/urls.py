@@ -7,3 +7,4 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('bulk/',views.bulk_import, name='bulk'),
 ]
+
