@@ -18,6 +18,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="minimum_complete" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -106,6 +111,8 @@
       <workItem from="1680172944055" duration="236000" />
       <workItem from="1680334131632" duration="2903000" />
       <workItem from="1680484726580" duration="685000" />
+      <workItem from="1680651941586" duration="2287000" />
+      <workItem from="1681033529171" duration="1033000" />
     </task>
     <task id="LOCAL-00001" summary="INITIATE project">
       <created>1680048093109</created>

@@ -9,13 +9,13 @@ def index(request):
 
     if request.method == 'POST':
         user_input = request.POST.get('user_input', '')
-        res = chatfast(user_input)  # chatfast() 함수 호출
+        res, utter, lat, lon, restname = chatfast(user_input)  # chatfast() 함수 호출
 
         # chatgpt_main.html 페이지를 GET 방식으로 호출하면서 GET 파라미터로 res 값을 전달
-        return render(request, 'chatgpt/index.html', {'res': res})
+        return render(request, 'chatgpt/index.html', {'res': res, 'utter': utter, 'lat': float(lat), 'lon': float(lon), 'restname':restname})
 
     # chatgpt_main.html 페이지 렌더링
-    return render(request, 'chatgpt/index.html', {'res': res})
+    return render(request, 'chatgpt/index.html', {'res': res, 'utter': "nothing", 'lat': 37.558096, 'lon': 126.998375 , 'restname': "None"})
 
 def bulk_import(request):
     CSV_PATH = 'static/menu_list.csv'
