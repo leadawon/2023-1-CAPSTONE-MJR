@@ -56,7 +56,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/Desktop/leedawon/TIL_github/2023-1-CAPSTONE-MJR&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/Desktop/leedawon/TIL_github/TIL2023/fastapi_pybo&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -112,7 +112,11 @@
       <workItem from="1680334131632" duration="2903000" />
       <workItem from="1680484726580" duration="685000" />
       <workItem from="1680651941586" duration="2287000" />
-      <workItem from="1681033529171" duration="1033000" />
+      <workItem from="1681033529171" duration="1179000" />
+      <workItem from="1681088612246" duration="386000" />
+      <workItem from="1681373300711" duration="75000" />
+      <workItem from="1682766826695" duration="307000" />
+      <workItem from="1684498345176" duration="3096000" />
     </task>
     <task id="LOCAL-00001" summary="INITIATE project">
       <created>1680048093109</created>
@@ -135,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680337048747</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="UPDATE api.py (foodname -&gt; category__contains)">
+      <created>1681034619357</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681034619357</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +157,7 @@
     <MESSAGE value="INITIATE project" />
     <MESSAGE value="ADD menu model + ADD bulk_import" />
     <MESSAGE value="UPDATE api.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE api.py" />
+    <MESSAGE value="UPDATE api.py (foodname -&gt; category__contains)" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE api.py (foodname -&gt; category__contains)" />
   </component>
 </project>
