@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>chatgpt</title>
-    {% load static %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         #map {
             width: 600px;
@@ -13,55 +15,129 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <form method="POST" action="{% url 'chatgpt:index' %}">
-            {% csrf_token %}
-            <div class="form-group">
-                <input type="text" class="form-control" name="user_input" placeholder="Enter your message">
+<section style="background-color: #eee;">
+        <div class="container py-5">
+
+            <div class="row">
+
+                <div class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
+
+                    <h5 class="font-weight-bold mb-3 text-center text-lg-start">채팅 목록</h5>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <!--새 채팅 버튼-->
+                                <li class="p-2 border-bottom">
+                                    <a href="/main/homepage/" class="d-flex justify-content-between">
+                                        <div class="pt-1">
+                                            <p class="fw-bold mb-0">+ New Chat</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!--채팅목록 생성코드-->
+
+                                <li class="p-2 border-bottom"style="background-color: #eee;">
+                                    <a href="/main/homepage/" class="d-flex justify-content-between">
+                                        <div class="pt-1">
+                                            <p class="fw-bold mb-0">오늘 점심은 도스마스</p>
+                                        </div>
+                                        <div class="pt-1">
+                                            <p class="text-muted mb-1">2023-05-20</p>
+                                        </div>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-7 col-xl-8">
+
+                    <ul class="list-unstyled">
+
+                        <!--Question 말풍선-->
+                        <li class="d-flex justify-content-between mb-4">
+                            <div class="card w-100">
+                                <div class="card-header d-flex justify-content-between p-3">
+                                    <p class="fw-bold mb-0">admin님</p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="mb-0">
+                                        {% if res %}
+                                            {{ utter }}
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+                            <img src="data:image/png;base64,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"
+                                alt="avatar" class="rounded-circle d-flex align-self-start ms-3 shadow-1-strong"
+                                width="60">
+                        </li>
+                        <!--Answer 말풍선-->
+                        <li class="d-flex justify-content-between mb-4">
+                            <img src="data:image/png;base64,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" alt="avatar"
+                                class="rounded-circle d-flex align-self-start me-3 shadow-1-strong" width="60">
+                            <div class="card w-100">
+                                <div class="card-header d-flex justify-content-between p-3">
+                                    <p class="fw-bold mb-0">MJR</p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="mb-0">
+                                        {% if res %}
+                                            {{ res }}
+                                            <br>
+                                            <div id="map"></div>
+                                            <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=b04a6aee7ba7937225b29c3a059f8b4b"></script>
+                                            <script>
+                                                var container = document.getElementById('map');
+                                                var options = {
+                                                    center: new kakao.maps.LatLng({{ lat }}, {{ lon }}),
+                                                    level: 1
+                                                };
+                                                var map = new kakao.maps.Map(container, options);
+                                                var positions = new Array();
+                                                latlng = new kakao.maps.LatLng({{ lat }}, {{ lon }});
+                                                positions.push({title: '{{ restname }}', latlng: latlng});
+                                                var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+                                                for (var i = 0; i < positions.length; i++) {
+                                                    var imageSize = new kakao.maps.Size(24, 35);
+                                                    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+                                                    var marker = new kakao.maps.Marker({
+                                                        map: map,
+                                                        position: positions[i].latlng,
+                                                        title: positions[i].title,
+                                                        image: markerImage
+                                                    });
+                                                }
+                                            </script>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+
+
+                        <!--입력칸-->
+                        <form method="POST" action="{% url 'chatgpt:index' %}">
+                            {% csrf_token %}
+                            <li class="bg-white mb-3">
+                                <div class="form-outline">
+                                    <input type="text" class="form-control" name="user_input" rows="4" placeholder="Enter your message">
+                                </div>
+                            </li>
+                            <button type="submit" class="btn btn-info btn-rounded float-end">전송</button>
+                        </form>
+                    </ul>
+
+                </div>
+
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            {% if res %}
-                <br>
-                <div class="row">
-                    <div class="col">
-                        <p><strong>You:</strong> {{ utter }}</p>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col">
-                        <p><strong>Bot:</strong> {{ res }}</p>
-                    </div>
-                </div>
-                <br>
-                <div id="map"></div>
-                <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=b04a6aee7ba7937225b29c3a059f8b4b"></script>
-                <script>
-                    var container = document.getElementById('map');
-                    var options = {
-                        center: new kakao.maps.LatLng({{ lat }}, {{ lon }}),
-                        level: 1
-                    };
-                    var map = new kakao.maps.Map(container, options);
-                    var positions = new Array();
-                    latlng = new kakao.maps.LatLng({{ lat }}, {{ lon }});
-                    positions.push({title: '{{ restname }}', latlng: latlng});
-                    var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
-                    for (var i = 0; i < positions.length; i++) {
-                        var imageSize = new kakao.maps.Size(24, 35);
-                        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-                        var marker = new kakao.maps.Marker({
-                            map: map,
-                            position: positions[i].latlng,
-                            title: positions[i].title,
-                            image: markerImage
-                        });
-                    }
-                </script>
-            {% else %}
-                <p>No result yet</p>
-            {% endif %}
-        </form>
-    </div>
+
+        </div>
+    </section>
+
 </body>
 </html>
