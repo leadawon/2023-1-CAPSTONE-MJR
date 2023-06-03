@@ -132,7 +132,7 @@
       <workItem from="1684902906192" duration="248000" />
       <workItem from="1685004111845" duration="647000" />
       <workItem from="1685050773420" duration="2184000" />
-      <workItem from="1685326197063" duration="1179000" />
+      <workItem from="1685326197063" duration="1222000" />
     </task>
     <task id="LOCAL-00001" summary="INITIATE project">
       <created>1680048093109</created>
@@ -183,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685057040970</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat : detail finished(bootstrap)">
+      <created>1685327417640</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1685327417640</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +216,7 @@
     <MESSAGE value="feat : css(bootstrap)" />
     <MESSAGE value="feat : chatbot design css(bootstrap)" />
     <MESSAGE value="feat : advertisement css(bootstrap)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : advertisement css(bootstrap)" />
+    <MESSAGE value="feat : detail finished(bootstrap)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : detail finished(bootstrap)" />
   </component>
 </project>
