@@ -149,6 +149,26 @@
                                                     });
                                                 }
                                             </script>
+                                            <script>
+        function showInput() {
+      var inputContainer = document.getElementById("inputContainer");
+      var bButton = document.getElementById("bButton");
+
+      // 입력란과 "B" 버튼을 보여줍니다.
+      inputContainer.style.display = "block";
+      bButton.style.display = "block";
+    }
+
+    function showPrompt() {
+      var inputValue = document.getElementById("inputValue").value;
+
+      if (inputValue) {
+        alert(inputValue + "로 예약이 완료되었습니다!");
+      } else {
+        alert("값을 입력하세요!");
+      }
+    }
+      </script>
                                         {% endif %}
                                     </p>
                                 </div>
