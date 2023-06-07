@@ -48,6 +48,26 @@
 
 
     </style>
+    <script>
+        function showInput() {
+      var inputContainer = document.getElementById("inputContainer");
+      var bButton = document.getElementById("bButton");
+
+      // 입력란과 "B" 버튼을 보여줍니다.
+      inputContainer.style.display = "block";
+      bButton.style.display = "block";
+    }
+
+    function showPrompt() {
+      var inputValue = document.getElementById("inputValue").value;
+
+      if (inputValue) {
+        alert(inputValue + "로 예약이 완료되었습니다!");
+      } else {
+        alert("값을 입력하세요!");
+      }
+    }
+    </script>
 
 </head>
 <body>
@@ -149,6 +169,16 @@
                                                     });
                                                 }
                                             </script>
+                                            <div class="container mt-5">
+                                                <h1>버튼을 누르면 예약하기</h1>
+                                                <button type="button" class="btn btn-primary" onclick="showInput()">예약하기</button>
+                                                <div id="inputContainer" style="display: none;">
+                                                  <div class="form-group mt-3">
+                                                    <input type="text" id="inputValue" class="form-control" placeholder="날짜를 입력하세요">
+                                                  </div>
+                                                  <button type="button" id="bButton" class="btn btn-success" style="display: none;" onclick="showPrompt()">예약!</button>
+                                                </div>
+                                              </div>
                                         {% endif %}
                                     </p>
                                 </div>
